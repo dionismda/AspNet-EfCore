@@ -1,4 +1,5 @@
 ﻿using Blog.Data;
+using Blog.Models;
 
 namespace Blog
 {
@@ -96,6 +97,38 @@ namespace Blog
                 //
                 // context.Posts.Update(post);
                 // context.SaveChanges();
+
+                //context.Users.Add(new User
+                //{
+                //    Bio = "BioTeste",
+                //    Email = "teste@teste.com.br",
+                //    Image = "https://teste.jpg",
+                //    Name = "TesteName",
+                //    PasswordHash = "1234",
+                //    Slug = "TesteSlug"
+                //});
+
+                //context.SaveChanges();
+
+                User user = context.Users.FirstOrDefault();
+                Post post = new Post
+                {
+                    Author = user,
+                    Body = "Meu Teste",
+                    Category = new Category
+                    {
+                        Name = "TesteCategory",
+                        Slug = "TesteCategoru"
+                    },
+                    CreateDate = DateTime.Now,
+                    Slug = "MeuTeste",
+                    Summary = "Meu Teste",
+                    Title = "Meu teste"
+                };
+
+                context.Posts.Add(post);
+                context.SaveChanges();
+
             }
         }
     }

@@ -28,7 +28,7 @@ namespace Blog.Data.Mappings
                 .HasMaxLength(80);
 
             builder.HasMany(x => x.Posts)
-                .WithOne(x=>x.Category);
+                .WithOne(x => x.Category);
 
             builder.HasIndex(x => x.Slug, "IDX_Category_Slug")
                 .IsUnique();

@@ -56,8 +56,8 @@ namespace Blog.Data.Mappings
             builder.HasIndex(x => x.Slug, "IDX_Post_Slug")
                 .IsUnique();
 
-            builder.HasOne(x=>x.Author)
-                .WithMany(x=>x.Posts)
+            builder.HasOne(x => x.Author)
+                .WithMany(x => x.Posts)
                 .HasConstraintName("FK_Post_Author")
                 .OnDelete(DeleteBehavior.Cascade);
 
@@ -69,7 +69,7 @@ namespace Blog.Data.Mappings
             builder.HasMany(x => x.Tags)
                 .WithMany(x => x.Posts)
                 .UsingEntity<Dictionary<string, object>>(
-                    "PostTag", 
+                    "PostTag",
                     post => post.HasOne<Tag>()
                                 .WithMany()
                                 .HasForeignKey("PostId")

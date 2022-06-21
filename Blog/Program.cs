@@ -1,5 +1,4 @@
 ﻿using Blog.Data;
-using Blog.Models;
 
 namespace Blog
 {
@@ -111,24 +110,26 @@ namespace Blog
 
                 //context.SaveChanges();
 
-                User user = context.Users.FirstOrDefault();
-                Post post = new Post
-                {
-                    Author = user,
-                    Body = "Meu Teste",
-                    Category = new Category
-                    {
-                        Name = "TesteCategory",
-                        Slug = "TesteCategoru"
-                    },
-                    CreateDate = DateTime.Now,
-                    Slug = "MeuTeste",
-                    Summary = "Meu Teste",
-                    Title = "Meu teste",
-                };
+                //User user = context.Users.FirstOrDefault();
+                //Post post = new Post
+                //{
+                //    Author = user,
+                //    Body = "Meu Teste",
+                //    Category = new Category
+                //    {
+                //        Name = "TesteCategory",
+                //        Slug = "TesteCategoru"
+                //    },
+                //    CreateDate = DateTime.Now,
+                //    Slug = "MeuTeste",
+                //    Summary = "Meu Teste",
+                //    Title = "Meu teste",
+                //};
 
-                context.Posts.Add(post);
-                context.SaveChanges();
+                //context.Posts.Add(post);
+                //context.SaveChanges();
+
+                //var posts = context.Posts.AsNoTracking().Skip(10).Take(20).ToList();
 
             }
         }

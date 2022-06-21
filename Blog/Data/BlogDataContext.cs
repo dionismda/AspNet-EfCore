@@ -12,7 +12,7 @@ namespace Blog.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer("Server=localhost,1433;Database=Blog;User ID=sa;Password=Futur@1313;TrustServerCertificate=True");
+            options.UseSqlServer("Server=localhost,1433;Database=Blog;User ID=sa;Password=xxXXxx;TrustServerCertificate=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

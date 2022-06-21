@@ -51,6 +51,12 @@ namespace Blog.Data.Mappings
                 .HasColumnType("VARCHAR")
                 .HasMaxLength(80);
 
+            builder.Property(x => x.Github)
+                .IsRequired()
+                .HasColumnName("Github")
+                .HasColumnType("VARCHAR")
+                .HasMaxLength(250);
+
             builder.HasIndex(x => x.Slug, "IDX_User_Slug")
                 .IsUnique();
 

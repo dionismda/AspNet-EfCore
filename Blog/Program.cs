@@ -105,7 +105,8 @@ namespace Blog
                 //    Image = "https://teste.jpg",
                 //    Name = "TesteName",
                 //    PasswordHash = "1234",
-                //    Slug = "TesteSlug"
+                //    Slug = "TesteSlug",
+                //    Github  = "TesteGithub"
                 //});
 
                 //context.SaveChanges();
@@ -123,7 +124,7 @@ namespace Blog
                     CreateDate = DateTime.Now,
                     Slug = "MeuTeste",
                     Summary = "Meu Teste",
-                    Title = "Meu teste"
+                    Title = "Meu teste",
                 };
 
                 context.Posts.Add(post);
